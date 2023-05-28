@@ -12,8 +12,8 @@ const videoSlice = createSlice({
             return name;
         },
         setVideos:(state,action)=>{
-            console.log(action);
-        state.videoList=action.payload
+        console.log(action.payload.contents);
+        state.videoList=action.payload.contents;
         }
     }
 })

@@ -1,4 +1,4 @@
-import { IconButton, Paper, Box, InputBase} from "@mui/material";
+import { IconButton, Paper, Box, InputBase } from "@mui/material";
 import { flexAlignCenter, searchBar } from "../../styles/styles";
 import Button from '@mui/material/Button';
 import { BsFillMicFill } from "react-icons/bs";
@@ -7,7 +7,7 @@ const SearchBar = () => {
     return (<>
         <Box sx={flexAlignCenter}>
             <Paper component="form" sx={searchBar}>
-                <InputBase sx={{ flex: 1, pl: 1, ml: 1, fontSize: 17, color:"#000000"}} placeholder="Search"/>
+                <InputBase sx={{ flex: 1, pl: 1, ml: 1, fontSize: 17, color: "#000000" }} placeholder="Search" />
                 <IconButton
                     type="button"
                     aria-label="search"
@@ -22,10 +22,10 @@ const SearchBar = () => {
                         fontSize: '5rem',
                     }}
                 >
-                    <SearchIcon/>
+                    <SearchIcon />
                 </IconButton>
             </Paper>
-            <Button sx={{color:"#333"}}>
+            <Button sx={{ color: "#333" }}>
                 <BsFillMicFill size={20} />
             </Button>
         </Box>

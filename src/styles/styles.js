@@ -8,6 +8,11 @@ export const appWrapper = {
   overflow: 'hidden',
 };
 
+export const flexAlignCenter = {
+  display: 'flex',
+  alignItems: 'center',
+};
+
 /***********************
  * Navigation
  ************************/
@@ -49,84 +54,3 @@ export const logoTextin = {
   fontWeight:300,
 };
 
-/***********************
- * SideList
- ************************/
-
-export const sideListWrapper = {
-  width: '100%',
-  bgcolor: 'background.paper',
-  borderRight: '1px solid #ddd',
-};
-
-/***********************
- * Shorts
- ************************/
-export const shortsWrapper = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  my: 3,
-};
-
-export const shortsCard = { maxWidth: 200, boxShadow: 'none', mx: 2 };
-export const shortsHeader = { ml: 1, fontSize: 20, fontWeight: 'bold' };
-
-/***********************
- * Notification List
- ************************/
-export const notificationWrapper = {
-  width: '100%',
-  maxWidth: 360,
-  pb: 0,
-};
-
-/***********************
- * Card.js
- ************************/
-
-export const appCardList = {
-  width: '100%',
-  bgcolor: 'background.paper',
-  p: 0,
-  m: 0,
-  maxWidth: '100%',
-};
-/***********************
- * AppContentArea
- ************************/
-export const appContentWrapper = {
-  display: 'flex',
-  mt: 8,
-  width: '100vw',
-  overflow: 'hidden',
-};
-
-/************************
- * General styles
- ************************/
-export const flexAlignCenter = {
-  display: 'flex',
-  alignItems: 'center',
-};
-
-export const flexColumnGrow = {
-  flexGrow: 1,
-  display: 'flex',
-  flexDirection: 'column',
-};
-
-export const flexColumnCenter = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-};
-
-export const inlineText = { display: 'inline', fontSize: 12 };
-
-export const flex = { display: 'flex' };
-
-export const scrollWrapper = {
-  overflowY: 'scroll',
-  '::-webkit-scrollbar': { height: '3px' },
-};

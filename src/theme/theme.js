@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material";
 import { grey, pink } from "@mui/material/colors";
-
 export const theme = createTheme({
     typography: {
         allVariants: {
