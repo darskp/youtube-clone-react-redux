@@ -20,7 +20,7 @@ export const flexAlignCenter = {
 export const searchBar = {
   display: 'flex',
   alignItems: 'center',
-  width: { md: 410, sm: 410 },
+  width: { sm:250, md: 350, lg:650 },
   height:37,
   boxShadow: 0,
   border: '1px solid #ccc',
@@ -31,6 +31,7 @@ export const searchBar = {
 export const appBar = {
   backgroundColor: 'white',
   color: '#000',
+ boxShadow: 'none'
 };
 
 export const toolbarWrapper = {
