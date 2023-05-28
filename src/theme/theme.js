@@ -1,14 +1,23 @@
 import { createTheme } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { grey, pink } from "@mui/material/colors";
 
 export const theme = createTheme({
-    button: {
-        color: "#333",
-        backgroundColor: red[500]
+    typography: {
+        allVariants: {
+            fontFamily: "Roboto",
+            fontSize: "14px",
+            fontWeight: 400
+        }
     },
     palette: {
         primary: {
-            main: red[500]
+            main: grey[700]
+        },
+        secondary: {
+            main: pink[500]
+        },
+        info:{
+        main:"#1976d2"
         }
     }
 })

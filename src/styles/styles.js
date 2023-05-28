@@ -1,6 +1,7 @@
 /***********************
  * App.js
  ************************/
+
 export const appWrapper = {
   display: 'flex',
   height: '100vh',
@@ -14,11 +15,12 @@ export const appWrapper = {
 export const searchBar = {
   display: 'flex',
   alignItems: 'center',
-  width: 400,
+  width: { md: 410, sm: 410 },
+  height:37,
   boxShadow: 0,
   border: '1px solid #ccc',
-  borderRadius: 0,
-  mr: 1,
+  borderRightColor: 'transparent',
+  borderRadius:6
 };
 
 export const appBar = {
@@ -29,13 +31,22 @@ export const appBar = {
 export const toolbarWrapper = {
   display: 'flex',
   justifyContent: 'space-between',
+  alignItems:'center',
   flexGrow: 1,
 };
 
 export const logoText = {
   fontSize: 22,
-  ml: 1,
+  ml: 0.2,
   fontFamily: 'Oswald',
+  fontWeight:500,
+  letterSpacing:"-1px",
+};
+export const logoTextin = {
+  fontSize: 10,
+  mb: 2.5,
+  ml:0.5,
+  fontWeight:300,
 };
 
 /***********************
@@ -119,4 +130,3 @@ export const scrollWrapper = {
   overflowY: 'scroll',
   '::-webkit-scrollbar': { height: '3px' },
 };
-export const hideOnMobile = { display: { xs: 'none', sm: 'flex' } };
