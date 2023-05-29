@@ -3,13 +3,27 @@ import { flexAlignCenter, searchBar } from "../../styles/styles";
 import Button from '@mui/material/Button';
 import { BsFillMicFill } from "react-icons/bs";
 import SearchIcon from '@mui/icons-material/Search';
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { getVideos } from "../../reduxtoolkit/feature/videoSlice";
 const SearchBar = () => {
+    const [videoname, setVideoname] = useState("");
+    let dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getVideos(videoname))
+    }, [videoname])
+    console.log(videoname)
+
+
+   let handleSubmit=(e)=>{
+e.preventDefault();
+}
     return (<>
         <Box sx={flexAlignCenter}>
-            <Paper component="form" sx={searchBar}>
-                <InputBase sx={{ flex: 1, pl: 1, ml: 1, fontSize: 17, color: "#000000" }} placeholder="Search" />
+            <Paper component="form" sx={searchBar} onSubmit={handleSubmit}>
+                <InputBase onChange={(e)=> setVideoname(e.target.value)} value={videoname} sx={{ flex: 1, pl: 1, ml: 1, fontSize: 17, color: "#000000" }} placeholder="Search"/>
                 <IconButton
-                    type="button"
+                    type="submit"
                     aria-label="search"
                     sx={{
                         border: '1px solid #ccc',

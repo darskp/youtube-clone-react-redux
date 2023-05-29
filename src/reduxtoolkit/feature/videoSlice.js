@@ -12,7 +12,9 @@ const videoSlice = createSlice({
             return name;
         },
         setVideos: (state, action) => {
-            state.videoList = action.payload.contents;
+            console.log(action);
+            state.videoList = action.payload.items
+;
         }
     }
 })

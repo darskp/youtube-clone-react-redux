@@ -9,14 +9,14 @@ const Tablist = () => {
         setValue(newvalue)
     }
     return (<>
-        <Box>
+        <Box component="nav">
             <Tabs
                 value={value}
                 onChange={handleChange}
                 variant="scrollable"
                 scrollButtons="auto"
-                allowScrollButtonMobile
-                aria-label="Scrollable tabs"
+                allowScrollButtonsMobile
+                aria-label="scrollable tabs"
             >
                 {tabItems.map((tab) => {
                     return <Tab key={tab.id} label={tab.text} />;

@@ -6,9 +6,8 @@ const SideList = () => {
     return (
     <>
         <Box sx={{
-            width: '98%',
+            width: '100%',
             bgcolor: 'background.paper',
-            borderRight: '1px solid #ddd',
         }}>
             {
                 sideListItems.map(item => {

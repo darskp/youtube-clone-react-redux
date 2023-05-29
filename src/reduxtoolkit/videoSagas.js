@@ -22,9 +22,9 @@ let key='AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20x';
 function* onLoadVideoAsync({ payload }) {
     yield delay(800);
     try {
-        const response = yield call(axios.get,`${API_ENDPOINT}/search/?q=${payload}`, options);
+        // const response = yield call(axios.get,`${API_ENDPOINT}/search/?q=${payload}`, options);
 
-        // const response = yield call(axios.get,`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${payload}&key=${key} `);
+        const response = yield call(axios.get,`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${payload}&key=${key} `);
         if (response.status == 200) {
             yield put(setVideos({ ...response.data }))
         }

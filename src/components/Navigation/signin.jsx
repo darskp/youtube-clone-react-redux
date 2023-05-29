@@ -13,11 +13,12 @@ const SigninBtn = () => {
             <Button sx={{
                 display: "flex", alignItems: "center", border: "1px solid lightgray", borderRadius: 5, px: 2, py: 0.2
             }}>
-                <Typography sx={{ mr: 1, mt: 0.5, zIndex: 1 }}><FaUserCircle size={18} color={theme.palette.info.main} /></Typography>
-                <Typography sx={{ textTransform: "capitalize", fontWeight: 500 }} color={theme.palette.info.main}>Sign in</Typography>
+                <Typography sx={{ mr: 1, mt: 0.5}}><FaUserCircle size={18} color={theme.palette.info.main} /></Typography>
+                <Typography sx={{ textTransform: "capitalize", fontWeight: 500, display: { xs: 'none', sm: 'flex' } }} color={theme.palette.info.main}>Sign in</Typography>
             </Button>
         </Box>
     </>);
+
 }
 
 export default SigninBtn;

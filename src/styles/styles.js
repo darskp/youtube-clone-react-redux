@@ -28,6 +28,20 @@ export const searchBar = {
   borderRadius:6
 };
 
+export const flexColumnGrow = {
+  flexGrow: 1,
+  display: 'flex',
+  flexDirection: 'column',
+};
+
+export const appCardList = {
+  width: '100%',
+  bgcolor: 'background.paper',
+  p: 0,
+  m: 0,
+  maxWidth: '100%',
+};
+
 export const appBar = {
   backgroundColor: 'white',
   color: '#000',
