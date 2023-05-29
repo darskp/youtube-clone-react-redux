@@ -1,19 +1,53 @@
-import Home from './pages/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Video from './pages/video';
-import Header from './components/Navigation/Navbar';
-function App() {
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link,Navigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import LoginForm from './pages/AuthFiles/loginForm';
+import RegistrationForm from './pages/AuthFiles/reg';
+import { auth } from './firebase.js';
+import { loginsuccess} from './reduxtoolkit/feature/authSlice';
+import AdminPage from './pages/Home';
+import HomePage from './pages/Homepage';
+
+const App = () => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        dispatch(
+          loginsuccess({
+            email: user.email,
+            password: null,
+          })
+        );
+      }
+    });
+    return () => unsubscribe();
+  }, [dispatch]);
+console.log(user);
   return (
-    <div>
-      <BrowserRouter>
-      <Header/>
+    <>
+      <Router>
+
         <Routes>
-          <Route path='/' element={<Home />} />
-          {/* <Route path='/video/:id' element={<Video />} /> */}
+        <Route path="/" element={<HomePage/>} />
+          <Route
+            path="/login"
+            element={user.isLoggedIn ? <Navigate to="/admin" /> : <LoginForm />}
+          />
+          <Route
+            path="/signup"
+            element={user.isLoggedIn ? <Navigate to="/admin" /> : <RegistrationForm />}
+          />
+          <Route
+            path="/admin"
+            element={user.isLoggedIn ? <AdminPage /> : <Navigate to="/login" />}
+          />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;

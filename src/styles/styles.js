@@ -69,4 +69,3 @@ export const logoTextin = {
   ml:0.5,
   fontWeight:300,
 };
-
