@@ -63,3 +63,21 @@ export const sideListItems = [
   { id: 22, text: 'Help', icon: <FiHelpCircle size={24} /> },
   { id: 23, text: 'Send Feedback', icon: <MdFeedback size={24} /> },
 ];
+
+export const tabItems = [
+  { id: 1, text: 'All' },
+  { id: 2, text: 'Music' },
+  { id: 3, text: 'A.R. Rahman' },
+  { id: 4, text: 'Kannada Cinema' },
+  { id: 5, text: 'Javascript' },
+  { id: 6, text: 'Live' },
+  { id: 7, text: 'Editing' },
+  { id: 8, text: 'Web Development' },
+  { id: 9, text: 'Anirudh Ravichander' },
+  { id: 10, text: 'Film' },
+  { id: 11, text: 'Debate' },
+  { id: 12, text: 'Cricket' },
+  { id: 13, text: 'Conversation' },
+  { id: 14, text: 'Pop Music' },
+  { id: 15, text: 'Recently Updated' },
+];

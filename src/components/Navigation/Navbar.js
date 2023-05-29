@@ -5,11 +5,12 @@ import { appBar, toolbarWrapper, logoText, logoTextin } from "../../styles/style
 import SearchBar from "./SearchBar";
 import SigninBtn from "./signin";
 import { useDispatch, useSelector } from "react-redux";
+import { toggleAction } from "../../reduxtoolkit/feature/toggleSlice";
 
 const Header = () => {
     let dispatch = useDispatch();
-    let isToggle = useSelector(state => state.toggle);
-    console.log(isToggle);
+let isToggle = useSelector(state => state.toggle.isToggle);
+console.log(isToggle);
     return (
         <>
             <AppBar component="nav" sx={appBar}>
@@ -17,7 +18,7 @@ const Header = () => {
                     <Box sx={toolbarWrapper}>
                         <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
                             <IconButton color="inherit" aria-label="open" sx={{ mr: { xs: 1, sm: 2 } }}>
-                                <FiMenu onClick={() => dispatch({ type: 'TOGGLE' })} />
+                               <FiMenu onClick={() => dispatch(toggleAction())} />
                             </IconButton>
                             <Box sx={{ marginBottom: "-4px" }}>
                                 <AiFillYoutube size={34} color="red" />

@@ -11,12 +11,12 @@ const options = {
     },
     headers: {
         // 'X-RapidAPI-Key': process.env.REACT_APP_YT_RAPIDAPI_KEY,
-        'X-RapidAPI-Key': '245f78cf12msh9102a5a16230fecp1acaa2jsn2fb26133f161',
+        'X-RapidAPI-Key': '245f78cf12msh9102a5a16230fecp1acaa2jsn2fb26133f161x',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
 
-let key='AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20';
+let key='AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20x';
 // let key=process.env.REACT_YT_RESPONSE_API_KEY;
 
 function* onLoadVideoAsync({ payload }) {

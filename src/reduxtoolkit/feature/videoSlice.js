@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 let initialState = {
-    isToggle: false,
     videoList: [],
     video: {}
 }
@@ -17,20 +16,6 @@ const videoSlice = createSlice({
         }
     }
 })
-const toggleSlice = createSlice({
-  name: 'toggle',
-  initialState: initialState.isToggle,
-  reducers: {
-    toggleAction: (state,action) => {
-        console.log(action);
-       if (action.type === 'TOGGLE') {
-    return !state;
-  }
-  return state;
-    },
-  },
-});
-export const { getVideos, setVideos} = videoSlice.actions
+
+export const { getVideos, setVideos } = videoSlice.actions
 export default videoSlice.reducer;
-export const {toggleSliceReducer}=toggleSlice.reducer;
-export const { toggleAction } = toggleSlice.actions;
