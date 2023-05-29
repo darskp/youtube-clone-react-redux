@@ -9,7 +9,6 @@ import { toggleAction } from "../../reduxtoolkit/feature/toggleSlice";
 
 const Header = () => {
     let dispatch = useDispatch();
-let isToggle = useSelector(state => state.toggle.isToggle);
     return (
         <>
             <AppBar component="nav" sx={appBar}>

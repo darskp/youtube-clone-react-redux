@@ -8,7 +8,7 @@ const CardList = ({items}) => {
                 {items.length &&
                     items.map((item) => {
                         const key = item.etag;
-                        const { videoId } = item.id;
+                        const videoId = item.id.videoId;
                         const { thumbnails, title, channelTitle } = item.snippet;
                         return (
                             <Grid key={key} item xs={12} sm={6} md={4} lg={3}>

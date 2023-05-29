@@ -11,9 +11,9 @@ const SigninBtn = () => {
                 <MoreVertIcon />
             </IconButton>
             <Button sx={{
-                display: "flex", alignItems: "center", border: "1px solid lightgray", borderRadius: 5, px: 2, py: 0.2
+                display: "flex", alignItems: "center", border: { xs: 'none', sm: "1px solid lightgray" }, borderRadius: { xs: 0, sm: 5 }, px: 2, py: 0.2
             }}>
-                <Typography sx={{ mr: 1, mt: 0.5}}><FaUserCircle size={18} color={theme.palette.info.main} /></Typography>
+                <Typography sx={{ mr: 1, mt: 0.5}}><FaUserCircle size={25} color={theme.palette.info.main} /></Typography>
                 <Typography sx={{ textTransform: "capitalize", fontWeight: 500, display: { xs: 'none', sm: 'flex' } }} color={theme.palette.info.main}>Sign in</Typography>
             </Button>
         </Box>

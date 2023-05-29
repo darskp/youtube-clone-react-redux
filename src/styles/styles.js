@@ -28,6 +28,7 @@ export const searchBar = {
   borderRadius:6
 };
 
+
 export const flexColumnGrow = {
   flexGrow: 1,
   display: 'flex',

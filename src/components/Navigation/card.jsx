@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 import { Box, Avatar, Card, CardContent, List, ListItem, ListItemAvatar, Typography, CardMedia } from "@mui/material";
-import { AiFillCheckCircle } from 'react-icons/ai';
 import { trimText } from "../../data/app.data";
 import { appCardList, flexColumnGrow } from "../../styles/styles";
 import { useSelector } from "react-redux";
-
-
 const CardIndu = ({ url, title, channelTitle, videoId }) => {
     let isOpen = useSelector(state => state.toggle.isToggle);
     return (
         <>
             <Card sx={{ boxShadow: 0 }}>
-                <Link href={`https://www.youtube.com/watch?v=${videoId}`}>
+                <Link to={`https://www.youtube.com/watch?v=${videoId}`} target="__blank">
                     <CardMedia
                         component="img"
                         image={url}
@@ -19,8 +16,8 @@ const CardIndu = ({ url, title, channelTitle, videoId }) => {
                         sx={{
                             borderRadius: 2,
                             height: isOpen
-                                ? { sm: '200px', xs: '180px', md: '165px', lg:'190px' }
-                                : { sm: '250px', xs: '185px', md: '140px',lg:"166px" },
+                                ? { sm: '200px', xs: '220px', md: '165px', lg:'170px' }
+                                : { sm: '150px', xs: '140px', md: '140px',lg:"145px" },
                         }}
                     />                
                     
@@ -34,7 +31,7 @@ const CardIndu = ({ url, title, channelTitle, videoId }) => {
                             <ListItemAvatar>
                                 <Avatar
                                     alt="Channel avatar"
-                                    src={`https://i.pravatar.cc/150?img=1`}
+                                    src={`https://i.pravatar.cc/150?`}
                                 />
                             </ListItemAvatar>
                             <Box sx={flexColumnGrow}>
@@ -55,7 +52,6 @@ const CardIndu = ({ url, title, channelTitle, videoId }) => {
                                     >
                                         {channelTitle}
                                     </Typography>
-                                    <AiFillCheckCircle />
                                 </Box>
                             </Box>
                         </ListItem>

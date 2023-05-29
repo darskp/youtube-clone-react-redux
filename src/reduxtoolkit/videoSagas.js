@@ -16,7 +16,7 @@ const options = {
     }
 };
 
-let key='AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20x';
+let key='AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20';
 // let key=process.env.REACT_YT_RESPONSE_API_KEY;
 
 function* onLoadVideoAsync({ payload }) {

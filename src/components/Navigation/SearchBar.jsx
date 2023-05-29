@@ -12,13 +12,13 @@ const SearchBar = () => {
     useEffect(() => {
         dispatch(getVideos(videoname))
     }, [videoname])
-    console.log(videoname)
-
 
    let handleSubmit=(e)=>{
 e.preventDefault();
 }
+
     return (<>
+
         <Box sx={flexAlignCenter}>
             <Paper component="form" sx={searchBar} onSubmit={handleSubmit}>
                 <InputBase onChange={(e)=> setVideoname(e.target.value)} value={videoname} sx={{ flex: 1, pl: 1, ml: 1, fontSize: 17, color: "#000000" }} placeholder="Search"/>

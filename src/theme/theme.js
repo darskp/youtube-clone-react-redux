@@ -45,6 +45,10 @@ export const theme = createTheme({
                     marginTop: "10px",
                     minHeight: '20px',
                     minWidth: '60px',
+                    selected: {
+          backgroundColor: "black",
+          color: "white",
+        },
                     ':active': {
                         backgroundColor:'black',
                         color:"white"
@@ -59,7 +63,8 @@ export const theme = createTheme({
                     }
                 },
                 indicator:{
-                backgroundColor:'transparent',
+                backgroundColor:'black',
+                    color:'white'
                 }
             }
         }

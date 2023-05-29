@@ -12,7 +12,7 @@ const videoSlice = createSlice({
             return name;
         },
         setVideos: (state, action) => {
-            console.log(action);
+            console.log(action.payload.items);
             state.videoList = action.payload.items
 ;
         }
