@@ -21,8 +21,11 @@ let navigate=useNavigate()
         }
     };
     let setEmail = () => {
-        let uName = email.slice(0, email.indexOf('@'));
-        return uName.charAt(0).toUpperCase() + uName.slice(1)
+        if(email!==null){
+            let uName = email.slice(0, email.indexOf('@'));
+            return uName.charAt(0).toUpperCase() + uName.slice(1)
+        }
+        return 'User'
     }
     return (<>
         <Box sx={flexAlignCenter}>
