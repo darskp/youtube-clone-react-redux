@@ -14,7 +14,7 @@ const AppcontentArea = () => {
                 display: 'flex',
                 mt: 10,
                 height: '85vh',
-                width: '100vw',
+                width: '100%',
                 overflow: 'hidden'}}>
 
                 <Box component="div"

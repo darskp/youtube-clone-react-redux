@@ -25,7 +25,10 @@ export const theme = createTheme({
             main: pink[500]
         },
         info: {
-            main: "#1976d2"
+            main: "#d63031"
+        },
+        user:{
+        main:"#1976d2"
         }
     },
     components: {

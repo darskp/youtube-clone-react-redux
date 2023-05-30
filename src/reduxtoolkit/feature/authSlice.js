@@ -23,7 +23,7 @@ let authslice = createSlice({
             state.error = action.payload;
         },
         regsuccess: (state, action) => {
-            state.isLoggedIn = true;
+            state.isLoggedIn = false;
             state.email = action.payload.email;
             state.password = action.payload.password;
             state.error = null;

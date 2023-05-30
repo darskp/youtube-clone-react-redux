@@ -7,7 +7,8 @@ import { auth } from './firebase.js';
 import { loginsuccess} from './reduxtoolkit/feature/authSlice';
 import AdminPage from './pages/Home';
 import HomePage from './pages/Homepage';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
@@ -29,7 +30,7 @@ console.log(user);
   return (
     <>
       <Router>
-
+ <ToastContainer />
         <Routes>
         <Route path="/" element={<HomePage/>} />
           <Route
