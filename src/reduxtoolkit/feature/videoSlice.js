@@ -2,19 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 let initialState = {
     videoList: [],
-    video: {}
+    video: {},
+    nextPageToken: null
 }
 const videoSlice = createSlice({
     name: "video",
     initialState,
     reducers: {
-        getVideos(name) {
-            return name;
+        getVideos(name,action) {
+            return {
+            ...name
+            };
         },
         setVideos: (state, action) => {
-            console.log(action.payload.items);
-            state.videoList = action.payload.items
-;
+            console.log(action);
+            state.videoList = [...state.videoList, ...action.payload.items];
+            state.nextPageToken = action.payload.nextPageToken;
         }
     }
 })

@@ -10,11 +10,12 @@ const SearchBar = () => {
     const [videoname, setVideoname] = useState("");
     let dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getVideos(videoname))
-    }, [videoname])
+        dispatch(getVideos(videoname));
+    }, [dispatch, videoname]);
 
    let handleSubmit=(e)=>{
 e.preventDefault();
+       dispatch(getVideos(videoname));
 }
 
     return (<>
