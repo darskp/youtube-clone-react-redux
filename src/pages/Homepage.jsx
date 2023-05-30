@@ -14,8 +14,11 @@ flexDirection:"column",
             width: '100%',
                 
             }}>
-            <Box component="div">
+            <Box component="div" sx={{mb:2}}>
                 <Typography>To access YouTube, please log in or create an account.</Typography>
+            </Box>
+            <Box component="div">
+                <Typography>Routes info : <br />/login <br />/signup<br /> /youtube (Without login, you can't access)</Typography>
             </Box>
                <Box component="div">
                 <Button
@@ -30,6 +33,7 @@ flexDirection:"column",
 
             </Box>
     );
+    
 };
 
 export default HomePage;

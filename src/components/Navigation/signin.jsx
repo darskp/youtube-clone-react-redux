@@ -6,14 +6,16 @@ import { flexAlignCenter } from "../../styles/styles";
 import { logout } from "../../reduxtoolkit/feature/authSlice";
 import { auth } from '../../firebase.js'
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 const SigninBtn = () => {
-
+let navigate=useNavigate()
     const email = useSelector((state) => state.auth.email);
     const dispatch = useDispatch();
     const handleLogout = async () => {
         try {
             await auth.signOut();
             dispatch(logout());
+            navigate('/')
         } catch (error) {
             console.error(error);
         }

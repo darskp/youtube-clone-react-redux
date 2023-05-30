@@ -7,12 +7,9 @@ import { auth } from './firebase.js';
 import { loginsuccess} from './reduxtoolkit/feature/authSlice';
 import AdminPage from './pages/Home';
 import HomePage from './pages/Homepage';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -26,24 +23,26 @@ const App = () => {
     });
     return () => unsubscribe();
   }, [dispatch]);
-console.log(user);
   return (
     <>
       <Router>
- <ToastContainer />
         <Routes>
         <Route path="/" element={<HomePage/>} />
           <Route
             path="/login"
-            element={user.isLoggedIn ? <Navigate to="/admin" /> : <LoginForm />}
+            element={user.isLoggedIn ? <Navigate to="/youtube" /> : <LoginForm />}
           />
           <Route
             path="/signup"
-            element={user.isLoggedIn ? <Navigate to="/admin" /> : <RegistrationForm />}
+            element={user.isLoggedIn ? <LoginForm /> : <RegistrationForm />}
           />
           <Route
-            path="/admin"
+            path="/youtube"
             element={user.isLoggedIn ? <AdminPage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="*"
+            element={<h1>404 Error</h1>}
           />
         </Routes>
       </Router>

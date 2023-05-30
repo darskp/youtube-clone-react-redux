@@ -18,7 +18,7 @@ let navigate=useNavigate();
       return;
     }
     dispatch({ type: 'auth/login', payload: { email, password } });
-    navigate('/admin')
+    navigate('/youtube')
     }
 return(
         <div>
@@ -75,10 +75,10 @@ return(
                                 to="/signup" >Signup</RouterLink>
                         </Typography>
                         <Typography sx={{
-                            marginTop: "10px", cursor: "pointer", color: "#333"
+                            marginTop: "10px", cursor: "pointer", color: "#333",textAlign:"center"
                         }}>You can't access the YouTube page router without login &nbsp;
                             <RouterLink component={RouterLink}
-                                to="/admin" >Check here</RouterLink>
+                                to="/youtube" >Check here</RouterLink>
                         </Typography>
 
                     </Box>
