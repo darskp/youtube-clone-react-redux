@@ -23,18 +23,18 @@ const options = {
   }
 };
 
-// let key = 'AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20';
-let key='AIzaSyBj8qLX-Z8fVe5JkpYUxqzSJk8u5mYQNWI'
+let key = 'AIzaSyBiFOSouTRUac87VhQi6JL7zkygwP_up20';
+// let key='AIzaSyBj8qLX-Z8fVe5JkpYUxqzSJk8u5mYQNWI'
 // let key=process.env.REACT_YT_RESPONSE_API_KEY;
 
 function* onLoadVideoAsync({ payload }) {
     let searchQuery = payload;
     if (!searchQuery) {
-      const randomQueryList = ['cats', 'dogs', 'nature', 'music']; 
+      const randomQueryList = ['cats', 'dogs', 'nature', 'music','react','java','Mysore','India','USPC','Peace','Men','kannada cinema']; 
       const randomIndex = Math.floor(Math.random() * randomQueryList.length);
       searchQuery = randomQueryList[randomIndex];
     }
-    yield delay(800);
+    yield delay(100);
     try {
         // const response = yield call(axios.get,`${API_ENDPOINT}/search/?q=${searchQuery}`, options);
         const response = yield call(axios.get, `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${key} `);
@@ -45,6 +45,7 @@ function* onLoadVideoAsync({ payload }) {
             };
             yield put(setVideos(videos));
         }
+        yield put(getVideos(''));
     } catch (error) {
         console.log(error);
     }
@@ -82,6 +83,8 @@ function* onLoadMoreVideoAsync({ payload, nextPageToken }) {
             }
             yield put(setVideos(newVideos))
         }
+            yield put(getVideos(''));
+
     }
     catch (error) {
         console.log(error);

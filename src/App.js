@@ -38,7 +38,7 @@ const App = () => {
           />
           <Route
             path="/youtube"
-            element={<AdminPage /> }
+            element={user.isLoggedIn ? <AdminPage /> : <Navigate to="/login" />}
           />
           <Route
             path="*"

@@ -9,9 +9,11 @@ const videoSlice = createSlice({
     name: "video",
     initialState,
     reducers: {
-        getVideos(name,action) {
+        getVideos(state, action) {
             return {
-            ...name
+                ...state,
+                videoList: [],
+                nextPageToken: null,
             };
         },
         setVideos: (state, action) => {
