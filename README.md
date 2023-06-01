@@ -23,9 +23,9 @@ The YouTube Clone project aims to replicate the functionality of YouTube, focusi
 
 ## Features
 - This project aims to replicate the functionality of YouTube
-– Users can sign up and log in using their credentials to access the application’s features
-– YouTube API integration enables the fetching of relevant video search results
-– The application includes an infinite scrolling feature for a seamless video viewing experience
+- Users can sign up and log in using their credentials to access the application’s features
+- YouTube API integration enables the fetching of relevant video search results
+- The application includes an infinite scrolling feature for a seamless video viewing experience
 
 ## Technologies Used
 - Material UI
