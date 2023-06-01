@@ -20,6 +20,7 @@ The YouTube Clone project aims to replicate the functionality of YouTube, focusi
 
 ## Links
 - GitHub URL: [GitHub URL here](https://github.com/darskp/youtube-clone-react-redux)
+- Live Url : [Preview](https://youtube-clone-react-redux-auth-scroll.netlify.app/)
 
 ## Features
 - This project aims to replicate the functionality of YouTube
