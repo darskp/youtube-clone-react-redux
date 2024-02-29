@@ -1,5 +1,5 @@
 # Youtube Clone
-Demo video URL : [Click here](https://drive.google.com/file/d/1CvrLiIDr_fG2gR3gptvuEv9c-lMuQedi/view?usp=sharing)
+Live URL : [Click here](https://youtube-clone-react-redux-auth-scroll.netlify.app/)
 
 ## Table of Contents
 - [Introduction](#Introduction)
@@ -16,7 +16,7 @@ Demo video URL : [Click here](https://drive.google.com/file/d/1CvrLiIDr_fG2gR3gp
 The YouTube Clone project aims to replicate the functionality of YouTube, focusing on user registration and authentication. This project utilizes Firebase and React Redux Toolkit to implement secure user authentication.
 
 ## Screenshot
-[![Demo Video](https://raw.githubusercontent.com/darskp/youtube-clone-react-redux/main/public/youtube-clone-react-redux.png)](https://drive.google.com/file/d/1CvrLiIDr_fG2gR3gptvuEv9c-lMuQedi/view?usp=sharing)
+![Image](https://raw.githubusercontent.com/darskp/youtube-clone-react-redux/main/public/youtube-clone-react-redux.png)
 
 ## Links
 - GitHub URL: [GitHub URL here](https://github.com/darskp/youtube-clone-react-redux)
