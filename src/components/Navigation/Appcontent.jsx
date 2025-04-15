@@ -11,6 +11,8 @@ const AppcontentArea = () => {
 
     const sideBarWidth = isOpen ? '60px' : '225px';
     let youtubeResponse = useSelector(state => state.video.videoList)
+    let youtubeResponseErr = useSelector(state => state.video.error)
+
     let nextPageToken = useSelector(state => state.video.nextPageToken)
 let dispatch=useDispatch();
 
@@ -65,7 +67,9 @@ useEffect(() => {
                             overflowX: 'hidden',
                             width: `calc(100vw - ${sideBarWidth})`,
                         }} >
+                            {youtubeResponseErr ? youtubeResponseErr : 
                         <CardList items={youtubeResponse} />
+                            }
                     </Box>
                 </Box>
             </Box>

@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState = {
     videoList: [],
     video: {},
-    nextPageToken: null
+    nextPageToken: null,
+    error: null,
 }
 const videoSlice = createSlice({
     name: "video",
@@ -14,14 +15,18 @@ const videoSlice = createSlice({
                 ...state,
                 videoList: [],
                 nextPageToken: null,
+                error: null,
             };
         },
         setVideos: (state, action) => {
             console.log(action);
             state.videoList = [...state.videoList, ...action.payload.items];
             state.nextPageToken = action.payload.nextPageToken;
+        },
+        setError: (state, action) => {
+            state.error = action.payload;
         }
     }
 })
-export const { getVideos, setVideos } = videoSlice.actions
+export const { getVideos, setVideos,setError } = videoSlice.actions
 export default videoSlice.reducer;
