@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-
 // Load the environment variables from .env
 const env = dotenv.config().parsed;
 
